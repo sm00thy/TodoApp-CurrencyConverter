@@ -1,0 +1,21 @@
+<div class="title"><h2>Your Todo Items</h2></div>
+
+<div class="container">
+<mat-list>
+  <mat-list-item class="mat-2-line" *ngFor="let element of items" >
+    <mat-checkbox color="primary"
+                  #showDetails [checked]="isItemChecked">
+    </mat-checkbox>
+    <div class="mat-list-item-text">
+      <p [ngClass]="showDetails.checked == true ? 'strikethrough' : ''">{{element.text}}</p>
+
+    </div>
+    <i class="material-icons" (click)="deleteItem(element)">
+      delete </i>
+    <mat-divider></mat-divider>
+  </mat-list-item>
+</mat-list>
+</div>
+
+<app-todo-item-manager (itemRefresh)=itemRefresh($event)>
+</app-todo-item-manager>
