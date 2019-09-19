@@ -1,7 +1,6 @@
 import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {TodoItem} from '../../model/todoItem';
 import {NgForm} from '@angular/forms';
-import {TodoService} from '../../shared/todo.service';
 
 @Component({
   selector: 'app-todo-item-manager',
@@ -12,7 +11,7 @@ export class TodoItemManagerComponent implements OnInit {
 
   @Output() itemRefresh = new EventEmitter<TodoItem>();
 
-  constructor(private todoService: TodoService) {}
+  constructor() {}
 
   ngOnInit() {
   }

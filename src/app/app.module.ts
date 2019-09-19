@@ -15,7 +15,6 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 import { RouterModule} from '@angular/router';
 import { MatListModule } from '@angular/material/list';
 import { HttpClientModule } from '@angular/common/http';
-import { TodoService } from './shared/todo.service';
 import { TodoItemManagerComponent } from './todo-list/todo-item-manager/todo-item-manager.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -60,7 +59,6 @@ import { MatTableModule } from '@angular/material/table';
     MatTableModule
   ],
   providers: [
-    TodoService
   ],
   bootstrap: [AppComponent]
 })
