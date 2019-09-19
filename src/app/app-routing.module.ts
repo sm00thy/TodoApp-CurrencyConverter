@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import {RouterModule, Routes} from '@angular/router';
-import {TodoListComponent} from './todo-list/todo-list.component';
+import { RouterModule, Routes } from '@angular/router';
+import { TodoListComponent } from './todo-list/todo-list.component';
+import { CurrencyConverterComponent } from './currency-converter/currency-converter.component';
 
 const appRoutes: Routes = [
+  { path: 'converter', component: CurrencyConverterComponent },
+  { path: 'todo', component: TodoListComponent },
   { path: '', component: TodoListComponent }
 ];
 
 @NgModule({
-  declarations: [],
   imports: [
-    CommonModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes)
   ]
 })
 export class AppRoutingModule { }

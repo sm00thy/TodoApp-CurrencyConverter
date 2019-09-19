@@ -1,6 +1,12 @@
-<mat-toolbar color="primary" role="heading">
+<mat-toolbar theme="default" role="heading">
   <i class="material-icons md-18">check_circle</i>
-  <span>Todo App</span>
+  <span>Todo List & Currency Rates Converter</span>
+  <div class="navbar ml-auto hidden-sm-up float-xs-right">
+    <button routerLinkActive="active" routerLink="todo" mat-button>To Do List</button>
+    <button routerLinkActive="active" routerLink="converter" mat-button>Currency Converter</button>
+  </div>
 </mat-toolbar>
-<app-todo-list></app-todo-list>
+
+<router-outlet></router-outlet>
+
 

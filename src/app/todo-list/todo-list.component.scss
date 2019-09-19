@@ -22,3 +22,9 @@
 .strikethrough {
   text-decoration: line-through;
 }
+
+.mat-list-item i {
+  position: absolute;
+  cursor: pointer;
+  right: 15px;
+}
