@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
       .then(res => {
         this.router.navigate(['/todo']);
       }, err => {
-        console.log(err);
+        console.log(err.message);
         this.errorMessage = err.message;
       });
   }
@@ -35,6 +35,6 @@ export class LoginComponent implements OnInit {
   register() {
     this.authService.register(this.credentials)
       .then(() => this.registerInfo = 'Account has been created! Now you can login using credentials you provided')
-      .catch(err => console.log(err.message));
+      .catch(err => this.errorMessage = err.message);
   }
 }
