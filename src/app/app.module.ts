@@ -26,13 +26,20 @@ import { MatSlideToggleModule } from  '@angular/material/slide-toggle';
 import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { LoginComponent } from './login/login.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoListComponent,
     TodoItemManagerComponent,
-    CurrencyConverterComponent
+    CurrencyConverterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +63,10 @@ import { MatTableModule } from '@angular/material/table';
     ReactiveFormsModule,
     MatSelectModule,
     MatIconModule,
-    MatTableModule
+    MatTableModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
+    AngularFireAuthModule
   ],
   providers: [
   ],

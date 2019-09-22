@@ -1,0 +1,13 @@
+<div class="main">
+  <mat-form-field>
+    <input matInput placeholder="login" [(ngModel)]="credentials.email">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="password" type="password" [(ngModel)]="credentials.password">
+  </mat-form-field>
+  <div class="buttons">
+    <button mat-stroked-button (click)="login()">Login</button>
+    <button mat-stroked-button (click)="register()">Register</button>
+  </div>
+  <p class="info">{{ registerInfo }}</p>
+</div>

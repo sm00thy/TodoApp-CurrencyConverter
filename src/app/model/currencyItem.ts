@@ -1,5 +1,5 @@
 export class CurrencyItem {
-  ecurrency: string;
+  currency: string;
   code: string;
   mid: number;
 }
